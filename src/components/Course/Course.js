@@ -2,10 +2,14 @@ import React from "react";
 
 import './Course.css';
 
-const Course = ({course}) => {
+const Course = ({course, onSelect}) => {
 
     const cutIfMoreThan = (str, num) => {
         return str.length > num ? str.substr(0, num)+'...' : str;
+    }
+
+    const closeButtonClickHandler = () => {
+        onSelect(course.id);
     }
 
     return (
@@ -17,7 +21,7 @@ const Course = ({course}) => {
                     <div>
                         <h5 className="card-title">{course.title}</h5>
                         <p className="card-text">{cutIfMoreThan(course.description, 150)}</p>
-                        <a href="#" className="btn btn-primary">Подробнее</a>
+                        <a href="#" className="btn btn-primary" onClick={closeButtonClickHandler}>Подробнее</a>
                     </div>
                 </div>
         </div>

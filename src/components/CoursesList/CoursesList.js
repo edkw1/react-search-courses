@@ -4,12 +4,12 @@ import Course from "../Course";
 import './CoursesList.css';
 
 
-const CoursesList = ({courses}) => {
+const CoursesList = ({courses, onSelectCourse}) => {
 
     const getCoursesList = (cs) => {
         return cs.map(course => {
             return (
-                <Course course={course}/>
+                <Course course={course} onSelect={onSelectCourse}/>
             )
         })
     }

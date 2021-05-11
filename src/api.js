@@ -19,6 +19,6 @@ export async function findCourses(searchText) {
     const data = [dt[1], dt[2], dt[3]];
 
     return new Promise(resolve => {
-        setTimeout(() => resolve(data), 3000);
+        setTimeout(() => resolve(data), 500);
     })
 }
