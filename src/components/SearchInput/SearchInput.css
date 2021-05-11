@@ -1,0 +1,12 @@
+.search-panel{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.search-panel{
+    width: 500px;
+}
+
+.search-panel button{
+    margin-left: 5px;
+}
