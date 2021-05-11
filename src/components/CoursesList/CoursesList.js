@@ -9,9 +9,7 @@ const CoursesList = ({courses}) => {
     const getCoursesList = (cs) => {
         return cs.map(course => {
             return (
-                <li>
-                    <Course course={course}/>
-                </li>
+                <Course course={course}/>
             )
         })
     }
@@ -19,13 +17,11 @@ const CoursesList = ({courses}) => {
     if (courses.length) {
         return (
             <div>
-                Courses list
-                <ul>
-                    {getCoursesList(courses)}
-                </ul>
+                <h5>Список найденных курсов</h5>
+                {getCoursesList(courses)}
             </div>
         );
-    }else{
+    } else {
         return <div>Список пуст</div>
     }
 

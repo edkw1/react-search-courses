@@ -1,0 +1,12 @@
+.card-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-body>div:first-child{
+    padding-right: 1rem;
+}
+.card-body>div>img{
+    width: 200px;
+}
