@@ -3,6 +3,11 @@ import React from "react";
 import './Course.css';
 
 const Course = ({course}) => {
+
+    const cutIfMoreThan = (str, num) => {
+        return str.length > num ? str.substr(0, num)+'...' : str;
+    }
+
     return (
         <div className="card">
                 <div className="card-body">
@@ -11,7 +16,7 @@ const Course = ({course}) => {
                     </div>
                     <div>
                         <h5 className="card-title">{course.title}</h5>
-                        <p className="card-text">{course.description}</p>
+                        <p className="card-text">{cutIfMoreThan(course.description, 150)}</p>
                         <a href="#" className="btn btn-primary">Подробнее</a>
                     </div>
                 </div>
